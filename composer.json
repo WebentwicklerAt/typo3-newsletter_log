@@ -1,0 +1,31 @@
+{
+  "name": "webentwicklerat/newsletter-log",
+  "type": "typo3-cms-extension",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "typo3/cms-core": "^13.4"
+  },
+  "require-dev": {
+    "saschaegerer/phpstan-typo3": "^2.1.1",
+    "typo3/coding-standards": "^0.8.0"
+  },
+  "replace": {
+    "typo3-ter/newsletter-log": "self.version"
+  },
+  "autoload": {
+    "psr-4": {
+      "WebentwicklerAt\\NewsletterLog\\": "Classes/"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "newsletter_log"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "typo3/cms-composer-installers": true,
+      "typo3/class-alias-loader": true
+    }
+  }
+}
