@@ -1,0 +1,9 @@
+tx_newsletterlog {
+    persistence {
+        storagePid = 2
+    }
+
+    settings {
+        pageType = 6245564
+    }
+}

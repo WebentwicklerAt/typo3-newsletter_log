@@ -1,0 +1,32 @@
+plugin.tx_newsletterlog {
+    persistence {
+        storagePid = {$tx_newsletterlog.persistence.storagePid}
+    }
+
+    settings {
+        pageType = {$tx_newsletterlog.settings.pageType}
+    }
+}
+
+newsletterLogShow = PAGE
+newsletterLogShow {
+    typeNum = {$tx_newsletterlog.settings.pageType}
+
+    config {
+        disableAllHeaderCode = 1
+    }
+
+    10 = USER
+    10 {
+        userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+        extensionName = NewsletterLog
+        pluginName = LogShow
+
+        controller = WebentwicklerAt\NewsletterLog\Controller\LogController
+        action = show
+
+        settings =< plugin.tx_newsletterlog.settings
+        persistence =< plugin.tx_newsletterlog.persistence
+        view =< plugin.tx_newsletterlog.view
+    }
+}

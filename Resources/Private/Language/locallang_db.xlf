@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext"
+          original="EXT:newsletter_log/Resources/Private/Language/locallang_db.xlf" date="2026-04-15T15:40:56Z"
+          product-name="newsletter_log">
+        <header/>
+        <body>
+            <trans-unit id="tx_newsletterlog_domain_model_log" resname="tx_newsletterlog_domain_model_log"
+                        xml:space="preserve">
+                <source>Newsletter log</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

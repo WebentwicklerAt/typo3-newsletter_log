@@ -1,0 +1,21 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:layout name="Default" />
+
+<f:section name="Main">
+    <f:if condition="{logs}">
+        <ul class="nav flex-column">
+            <f:for each="{logs}" as="log">
+                <li class="nav-item">
+                    <f:link.action class="nav-link" pluginName="LogShow" action="show" pageType="{settings.pageType}" arguments="{log: log}">
+                        <f:format.date date="{log.crdate}" format="{f:translate(key: 'log.dateFormat')}"/>:
+                        {log.subject}
+                    </f:link.action>
+                </li>
+            </f:for>
+        </ul>
+    </f:if>
+</f:section>
+
+</html>

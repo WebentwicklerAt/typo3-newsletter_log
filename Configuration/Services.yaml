@@ -1,0 +1,16 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  WebentwicklerAt\NewsletterLog\:
+    resource: '../Classes/*'
+    exclude: '../Classes/Domain/Model/*'
+
+  WebentwicklerAt\NewsletterLog\Service\LogService:
+    public: true
+    arguments:
+      - '@WebentwicklerAt\NewsletterLog\Domain\Repository\FrontendUserRepository'
+      - '@WebentwicklerAt\NewsletterLog\Domain\Repository\LogRepository'
+      - '@TYPO3\CMS\Extbase\Persistence\PersistenceManagerInterface'

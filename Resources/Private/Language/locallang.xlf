@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext"
+          original="EXT:newsletter_log/Resources/Private/Language/locallang.xlf" date="2026-04-15T13:22:54Z"
+          product-name="newsletter_log">
+        <header/>
+        <body>
+            <trans-unit id="tx_newsletterlog_log" resname="tx_newsletterlog_log" xml:space="preserve">
+                <source>Newsletter log</source>
+            </trans-unit>
+            <trans-unit id="log.dateFormat" resname="log.dateFormat" xml:space="preserve">
+                <source>%e. %B %Y, %H:%M:%S</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="EXT:extensionKey/Resources/Private/Language/Backend.xlf"
+          date="2026-04-15T15:41:57Z" product-name="extensionKey">
+        <header/>
+        <body>
+            <trans-unit id="plugin.LogIndex" resname="plugin.LogIndex" xml:space="preserve">
+                <source>Newsletter log - index</source>
+            </trans-unit>
+            <trans-unit id="plugin.LogShow" resname="plugin.LogShow" xml:space="preserve">
+                <source>Newsletter log - show</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
