@@ -18,13 +18,26 @@ declare(strict_types=1);
 namespace WebentwicklerAt\NewsletterLog\Domain\Repository;
 
 use TYPO3\CMS\Extbase\Persistence\Repository;
+use WebentwicklerAt\NewsletterLog\Domain\Model\FrontendUser;
 
 class FrontendUserRepository extends Repository
 {
-    public function initializeObject(): void
+    public function findOneByEmailInStoragePageIds(string $email, ?array $storagePageIds = null): ?FrontendUser
     {
-        $querySettings = $this->createQuery()->getQuerySettings();
-        $querySettings->setRespectStoragePage(false);
-        $this->setDefaultQuerySettings($querySettings);
+        $query = $this->createQuery();
+
+        $querySettings = $query->getQuerySettings();
+        if ($storagePageIds === null) {
+            $querySettings->setRespectStoragePage(false);
+        } else {
+            $querySettings->setStoragePageIds($storagePageIds);
+        }
+
+        $constraint = $query->equals('email', $email);
+
+        /** @var FrontendUser|null $result */
+        $result = $query->matching($constraint)->setLimit(1)->execute()->getFirst();
+
+        return $result;
     }
 }

@@ -32,9 +32,15 @@ class LogService
     {
     }
 
-    public function logForEmail(int $storagePid, string $email, string $subject, string $body): bool
+    public function logForEmail(
+        int $storagePid,
+        string $email,
+        string $subject,
+        string $body,
+        ?array $frontendUserStoragePageIds = null,
+    ): bool
     {
-        $frontendUser = $this->frontendUserRepository->findOneByEmail($email);
+        $frontendUser = $this->frontendUserRepository->findOneByEmailInStoragePageIds($email, $frontendUserStoragePageIds);
         if (!$frontendUser) {
             return false;
         }
